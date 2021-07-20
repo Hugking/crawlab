@@ -99,6 +99,11 @@
             </template>
           </template>
         </el-table-column>
+        <el-table-column :label="$t('Re')" width="auto" min-width="120px">
+          <template slot-scope="scope">
+            <el-input v-model="scope.row.re" :placeholder="$t('Re')" suffix-icon="el-icon-edit" />
+          </template>
+        </el-table-column>
         <el-table-column :label="$t('Next Stage')" width="250px">
           <template slot-scope="scope">
             <el-select

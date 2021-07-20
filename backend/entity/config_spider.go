@@ -27,12 +27,14 @@ type Stage struct {
 	PageCss   string  `yaml:"page_css" json:"page_css"`
 	PageXpath string  `yaml:"page_xpath" json:"page_xpath"`
 	PageAttr  string  `yaml:"page_attr" json:"page_attr"`
+	PageRe    string  `yaml:"page_re" json:"page_re"`
 	Fields    []Field `yaml:"fields" json:"fields"`
 }
 
 type Field struct {
 	Name      string `yaml:"name" json:"name"`
 	Css       string `yaml:"css" json:"css"`
+	Re        string `yaml:"re" json:"re"`
 	Xpath     string `yaml:"xpath" json:"xpath"`
 	Attr      string `yaml:"attr" json:"attr"`
 	NextStage string `yaml:"next_stage" json:"next_stage"`

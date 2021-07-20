@@ -10,10 +10,12 @@ def get_real_url(response, url):
     elif re.search(r'^\/\/', url):
         u = urlparse(response.url)
         return u.scheme + ":" + url
-    return urljoin(response.url, url)
+    return response.urljoin(url)
 
 class ConfigSpider(scrapy.Spider):
     name = 'config_spider'
+    source = '###SOURCES###'
+    crawler_name = '###CRAWLER_NAME###'
 
     def start_requests(self):
         yield scrapy.Request(url='###START_URL###', callback=self.###START_STAGE###)

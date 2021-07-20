@@ -194,6 +194,7 @@ export default {
   'Extract Type': '提取类别',
   'CSS Selector': 'CSS选择器',
   'CSS': 'CSS',
+  'Re': '正则表达式',
   'XPath': 'Xpath',
   'Crawl Type': '抓取类别',
   'List Only': '仅列表',

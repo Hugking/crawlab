@@ -301,6 +301,12 @@
                         <el-input v-if="!stage.page_xpath" v-model="stage.page_css" />
                         <el-input v-else v-model="stage.page_xpath" />
                       </el-form-item>
+                      <el-form-item :label="$t('Attribute')" class="page-selector">
+                        <el-input  v-model="stage.page_attr" />
+                      </el-form-item>
+                      <el-form-item :label="$t('Re')" class="page-selector">
+                        <el-input  v-model="stage.page_re" />
+                      </el-form-item>
                     </el-form>
                     <el-tag
                       v-if="!stage.page_xpath"

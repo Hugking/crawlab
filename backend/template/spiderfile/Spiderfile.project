@@ -1,0 +1,59 @@
+name: project
+display_name: ""
+col: ""
+remark: ""
+type: ""
+engine: scrapy
+start_url: http://zsztb.zhoushan.gov.cn/zsztbweb/gcjs/010010/?Paging=1
+start_stage: list
+stages:
+- name: list
+  is_list: true
+  list_css: ""
+  list_xpath: //tr[@height="30"]
+  page_css: ""
+  page_xpath: //*[contains(text(),"下页")]
+  page_attr: onclick
+  page_re: .*?\'(.*)\'
+  fields:
+  - name: project_name
+    css: ""
+    re: ""
+    xpath: ./td[2]/a
+    attr: title
+    next_stage: ""
+    remark: ""
+  - name: original_url
+    css: ""
+    re: ""
+    xpath: ./td[2]/a
+    attr: href
+    next_stage: detail
+    remark: ""
+  - name: project_date
+    css: ""
+    re: ""
+    xpath: ./td[3]
+    attr: ""
+    next_stage: ""
+    remark: ""
+- name: detail
+  is_list: false
+  list_css: ""
+  list_xpath: //body
+  page_css: ""
+  page_xpath: ""
+  page_attr: ""
+  page_re: ""
+  fields:
+  - name: content
+    css: ""
+    re: ""
+    xpath: //*[@id="tblInfo"]
+    attr: None
+    next_stage: ""
+    remark: ""
+settings:
+  ROBOTSTXT_OBEY: "false"
+  USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+cmd: ""
