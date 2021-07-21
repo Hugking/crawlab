@@ -24,4 +24,5 @@ stages:
     css: "#product_description + p"
 settings:
   ROBOTSTXT_OBEY: true
+  FILTER_URL: true
   AUTOTHROTTLE_ENABLED: true

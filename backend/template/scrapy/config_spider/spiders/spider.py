@@ -19,7 +19,7 @@ class ConfigSpider(scrapy.Spider):
 
     @classmethod
     def update_settings(cls, settings):
-        if settings.get("check_url"):
+        if settings.get("FILTER_URL"):
             # bloomfilter
             settings.setdict(cls.custom_settings or {
                 "SCHEDULER": "scrapy_redis_bloomfilter.scheduler.Scheduler",
