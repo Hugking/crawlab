@@ -24,7 +24,7 @@ class ConfigSpider(scrapy.Spider):
             settings.setdict(cls.custom_settings or {
                 "SCHEDULER": "scrapy_redis_bloomfilter.scheduler.Scheduler",
                 "SCHEDULER_DUPEFILTER_KEY":"crawlab_spider:bloomfilter",
-                "DUPEFILTER_CLASS":"scrapy_redis_bloomfilter.dupefilter.RFPDupeFilter"
+                "DUPEFILTER_CLASS":"scrapy_redis_bloomfilter.dupefilter.RFPDupeFilter",
                 "DUPEFILTER_DEBUG": True
             }, priority='spider')
 
